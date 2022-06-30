@@ -41,6 +41,12 @@ function handlePosition(position) {
       document.querySelector(".press").innerHTML = data.list[0].main.pressure;
       document.querySelector(".hum").innerHTML = data.list[0].main.humidity;
       document.querySelector(".wind").innerHTML = data.list[0].wind.speed;
+      var icon = document.querySelector("#icon");
+      icon.src =
+        "http://openweathermap.org/img/w/" +
+        data.list[0].weather[0].icon +
+        ".png";
+      icon.classList.add("weather-icon");
     });
 }
 
@@ -72,6 +78,12 @@ function showData(event) {
         document.querySelector(".press").innerHTML = data.list[0].main.pressure;
         document.querySelector(".hum").innerHTML = data.list[0].main.humidity;
         document.querySelector(".wind").innerHTML = data.list[0].wind.speed;
+        var icon = document.querySelector("#icon");
+        icon.src =
+          "http://openweathermap.org/img/w/" +
+          data.list[0].weather[0].icon +
+          ".png";
+        icon.classList.add("weather-icon");
       });
   }
 }
