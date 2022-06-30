@@ -28,20 +28,6 @@ function chHeader(event) {
   }
 }
 
-let form = document.querySelector(".search-form");
-form.addEventListener("submit", chHeader);
-
-function tswitchC(event) {
-  event.preventDefault();
-  var temperature = document.querySelector(".temperature");
-  temperature.innerHTML = "19";
-}
-function tswitchF(event) {
-  event.preventDefault();
-  var temperature = document.querySelector(".temperature");
-  temperature.innerHTML = "66";
-}
-
 document.querySelector("#C").addEventListener("click", tswitchC);
 document.querySelector("#F").addEventListener("click", tswitchF); */
 
