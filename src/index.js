@@ -47,6 +47,10 @@ function handlePosition(position) {
         data.list[0].weather[0].icon +
         ".png";
       icon.classList.add("weather-icon");
+      document.querySelectorAll(".hide").forEach((element) => {
+        element.classList.remove("hide");
+      });
+      document.querySelector("#C").classList.add("lightoff");
     });
 }
 
@@ -84,6 +88,10 @@ function showData(event) {
           data.list[0].weather[0].icon +
           ".png";
         icon.classList.add("weather-icon");
+        document.querySelectorAll(".hide").forEach((element) => {
+          element.classList.remove("hide");
+        });
+        document.querySelector("#C").classList.add("lightoff");
       });
   }
 }

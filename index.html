@@ -38,7 +38,7 @@
             <div class="col-3">
               <input
                 type="submit"
-                value="Current"
+                value="Current place"
                 class="form-control btn btn-success shadow-sm"
                 id="crrntbtn"
               />
@@ -57,20 +57,17 @@
               <span class="float-left">
                 <span class="temperature"></span
                 ><span class="units"
-                  >°<a href="#" id="C" class="lightoff">C</a> | °<a
-                    href="#"
-                    id="F"
-                    >F</a
-                  ></span
+                  ><a href="#" id="C" class="hide">°C</a>
+                  <a href="#" id="F" class="hide">°F</a></span
                 >
               </span>
             </div>
           </div>
           <div class="col-6">
             <ul>
-              <li>Pressure: <span class="press"></span>hPa</li>
-              <li>Humidity: <span class="hum"></span>%</li>
-              <li>Wind: <span class="wind"></span>m/s</li>
+              <li class="hide">Pressure: <span class="press"></span>hPa</li>
+              <li class="hide">Humidity: <span class="hum"></span>%</li>
+              <li class="hide">Wind: <span class="wind"></span>m/s</li>
             </ul>
           </div>
         </div>
