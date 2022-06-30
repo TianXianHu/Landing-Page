@@ -53,3 +53,9 @@ li {
 .search-form {
   margin-bottom: 20px;
 }
+.cfoot {
+  display: block;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
