@@ -47,8 +47,8 @@
         </form>
         <h1>Choose your city</h1>
         <ul>
-          <li id="todate">Wednesday 22:00</li>
-          <li>Partly Cloudy</li>
+          <li id="todate"></li>
+          <li class="wording"></li>
         </ul>
         <div class="row">
           <div class="col-6">
@@ -58,19 +58,23 @@
                 alt="Cloudy icon"
                 class="weather-icon float-left"
               />
-              <div class="float-left">
-                <span class="temperature"> </span
+              <span class="float-left">
+                <span class="temperature"></span
                 ><span class="units"
-                  ><a href="#" id="C">°C</a> | <a href="#" id="F">°F</a></span
+                  >°<a href="#" id="C" class="lightoff">C</a> | °<a
+                    href="#"
+                    id="F"
+                    >F</a
+                  ></span
                 >
-              </div>
+              </span>
             </div>
           </div>
           <div class="col-6">
             <ul>
-              <li>Precipitation: 0%</li>
-              <li>Humidity: 77%</li>
-              <li>Wind: 8 km/h</li>
+              <li>Pressure: <span class="press"></span>hPa</li>
+              <li>Humidity: <span class="hum"></span>%</li>
+              <li>Wind: <span class="wind"></span>m/s</li>
             </ul>
           </div>
         </div>

@@ -53,9 +53,22 @@ li {
 .search-form {
   margin-bottom: 20px;
 }
+
 .cfoot {
   display: block;
   text-align: center;
   margin: 0;
   padding: 0;
+}
+
+.wording {
+  text-transform: capitalize;
+}
+.lighton {
+  text-decoration: underline;
+  color: blue;
+}
+.lightoff {
+  text-decoration: none;
+  color: black;
 }
