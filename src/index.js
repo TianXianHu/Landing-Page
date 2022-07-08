@@ -30,9 +30,13 @@ function handlePosition(position) {
         <img src="http://openweathermap.org/img/wn/${
           cast.weather[0].icon
         }@2x.png" width="40"/>
-        <div class="weather-forecast-temperatures">
-          <span class="tempmax"> ${Math.round(cast.temp.max)}° </span>
-          <span class="tempmin"> ${Math.round(cast.temp.min)}° </span>
+        <div >
+          <span class="tempmax"><span class="tt">${Math.round(
+            cast.temp.max
+          )}</span>°</span>
+          <span class="tempmin"><span class="tt">${Math.round(
+            cast.temp.min
+          )}</span>°</span>
         </div>
       </div>`;
       }
@@ -137,9 +141,13 @@ function showData(event) {
         <img src="http://openweathermap.org/img/wn/${
           cast.weather[0].icon
         }@2x.png" width="40"/>
-        <div class="weather-forecast-temperatures">
-          <span class="tempmax"> ${Math.round(cast.temp.max)}° </span>
-          <span class="tempmin"> ${Math.round(cast.temp.min)}° </span>
+        <div>
+          <span class="tempmax"><span class="tt">${Math.round(
+            cast.temp.max
+          )}</span>°</span>
+          <span class="tempmin"><span class="tt">${Math.round(
+            cast.temp.min
+          )}</span>°</span>
         </div>
       </div>`;
           }
@@ -160,7 +168,11 @@ function tswitchC(event) {
   }
   document.querySelector("#C").classList.add("lightoff");
   document.querySelector("#F").classList.remove("lightoff");
-  document.querySelector(".temperature").innerHTML = metricTemp;
+  let list_of_temp = document.querySelectorAll(".tt");
+  list_of_temp.forEach(function (element) {
+    var temp = element.innerHTML;
+    element.innerHTML = Math.round((temp - 32) / 0.55555555);
+  });
 }
 function tswitchF(event) {
   event.preventDefault();
@@ -169,9 +181,12 @@ function tswitchF(event) {
   }
   document.querySelector("#C").classList.remove("lightoff");
   document.querySelector("#F").classList.add("lightoff");
-  document.querySelector(".temperature").innerHTML = Math.round(
-    (metricTemp * 5) / 9 + 32
-  );
+  //document.querySelector(".temperature").innerHTML = Math.round((metricTemp * 5) / 9 + 32);
+  let list_of_temp = document.querySelectorAll(".tt");
+  list_of_temp.forEach(function (element) {
+    var temp = element.innerHTML;
+    element.innerHTML = Math.round(temp * 0.55555555 + 32);
+  });
 }
 
 document.querySelector("#crrntbtn").addEventListener("click", showCurrentTemp);
