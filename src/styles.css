@@ -78,3 +78,26 @@ li {
   color: rgb(33, 33, 33);
   cursor: initial;
 }
+
+.date {
+  font-size: 20px;
+  line-height: 2;
+  color: rgba(24, 19, 95, 0.651);
+  text-align: center;
+  text-shadow: #5c021d;
+  font-weight: 400;
+}
+
+.tempmax {
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #790427;
+}
+
+.tempmin {
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #6b52f69c;
+}
