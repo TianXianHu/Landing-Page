@@ -2,6 +2,7 @@ var metricTemp = null;
 var res = null;
 
 function dateConvert(date) {
+  var outstring = "";
   let days = [
     "Sunday",
     "Monday",
@@ -11,7 +12,18 @@ function dateConvert(date) {
     "Friday",
     "Saturday",
   ];
-  return days[date.getDay()] + " " + date.getHours() + ":" + date.getMinutes();
+  outstring = days[date.getDay()] + " ";
+  if (date.getHours() < 10) {
+    outstring += "0" + date.getHours() + ":";
+  } else {
+    outstring += date.getHours() + ":";
+  }
+  if (date.getMinutes() < 10) {
+    outstring += "0" + date.getMinutes();
+  } else {
+    outstring += date.getMinutes();
+  }
+  return outstring;
 }
 
 function dateConvert2(date) {
