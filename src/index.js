@@ -1,4 +1,4 @@
-var metricTemp = null;
+var metricTemp = [];
 var res = null;
 
 function dateConvert(date) {
@@ -175,29 +175,23 @@ function showData(event) {
 
 function tswitchC(event) {
   event.preventDefault();
-  if (!metricTemp) {
-    metricTemp = document.querySelector(".temperature").innerText;
-  }
   document.querySelector("#C").classList.add("lightoff");
   document.querySelector("#F").classList.remove("lightoff");
   let list_of_temp = document.querySelectorAll(".tt");
-  list_of_temp.forEach(function (element) {
+  list_of_temp.forEach(function (element, i) {
     var temp = element.innerHTML;
-    element.innerHTML = Math.round((temp - 32) / 0.55555555);
+    element.innerHTML = metricTemp[i];
   });
 }
 function tswitchF(event) {
   event.preventDefault();
-  if (!metricTemp) {
-    metricTemp = document.querySelector(".temperature").innerText;
-  }
   document.querySelector("#C").classList.remove("lightoff");
   document.querySelector("#F").classList.add("lightoff");
-  //document.querySelector(".temperature").innerHTML = Math.round((metricTemp * 5) / 9 + 32);
   let list_of_temp = document.querySelectorAll(".tt");
-  list_of_temp.forEach(function (element) {
+  list_of_temp.forEach(function (element, i) {
     var temp = element.innerHTML;
-    element.innerHTML = Math.round(temp * 0.55555555 + 32);
+    metricTemp[i] = element.innerHTML;
+    element.innerHTML = Math.round(temp * 0.55555555555555 + 32);
   });
 }
 
