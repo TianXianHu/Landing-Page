@@ -191,7 +191,7 @@ function tswitchF(event) {
   list_of_temp.forEach(function (element, i) {
     var temp = element.innerHTML;
     metricTemp[i] = element.innerHTML;
-    element.innerHTML = Math.round(temp * 0.55555555555555 + 32);
+    element.innerHTML = Math.round(temp * 1.8 + 32);
   });
 }
 
