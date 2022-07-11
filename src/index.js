@@ -39,7 +39,7 @@ function handlePosition(position) {
       if (index > 0 && index < 6) {
         futureElement += `<div class="col">
           <div class="date">${dateConvert2(new Date(cast.dt * 1000))}</div>
-        <img src="http://openweathermap.org/img/wn/${
+        <img src="https://openweathermap.org/img/wn/${
           cast.weather[0].icon
         }@2x.png" width="40"/>
         <div >
@@ -56,8 +56,8 @@ function handlePosition(position) {
     let future = document.querySelector("#furute");
     future.innerHTML = futureElement;
   }
-  var lon = position.coords.latitude;
-  var lat = position.coords.longitude;
+  var lat = position.coords.latitude;
+  var lon = position.coords.longitude;
   const key = "2b6fdad0cbd018949c50c70f72250726";
   var url =
     "https://api.openweathermap.org/data/2.5/forecast?lat=" +
@@ -130,7 +130,7 @@ function showData(event) {
         document.querySelector(".wind").innerHTML = data.list[0].wind.speed;
         var icon = document.querySelector("#icon");
         icon.src =
-          "http://openweathermap.org/img/w/" +
+          "https://openweathermap.org/img/w/" +
           data.list[0].weather[0].icon +
           ".png";
         icon.classList.add("weather-icon");
@@ -150,7 +150,7 @@ function showData(event) {
           if (index > 0 && index < 6) {
             futureElement += `<div class="col">
           <div class="date">${dateConvert2(new Date(cast.dt * 1000))}</div>
-        <img src="http://openweathermap.org/img/wn/${
+        <img src="https://openweathermap.org/img/wn/${
           cast.weather[0].icon
         }@2x.png" width="40"/>
         <div>
